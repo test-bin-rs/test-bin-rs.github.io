@@ -1,3 +1,4 @@
+//! This is exactly the same as `examples/main.rs`
 fn main() {
-    assert!(true);
+    assert_true::test();
 }

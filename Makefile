@@ -1,3 +1,4 @@
 all:
-	cat -n src/main.rs
+	cargo test
 	cargo run
+	cargo run --example main
