@@ -1,0 +1,7 @@
+[package]
+name = "test-bin"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+assert-true = { git = "https://github.com/test-bin-rs/test-bin-rs.github.io", branch = "assert-true", version = "0.1.0" }
