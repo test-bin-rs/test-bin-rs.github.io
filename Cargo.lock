@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "assert-true"
 version = "0.1.0"
-source = "git+https://github.com/test-bin-rs/test-bin-rs.github.io?branch=assert-true#3b26a9ccbeabe4227c1423b6811705eaaf4f7d07"
+source = "git+https://github.com/test-bin-rs/test-bin-rs.github.io?branch=assert-true#7d8fb68b0ab2833caa9ab7cc2255cf4d278a9b3e"
 
 [[package]]
 name = "test-bin"
