@@ -1,1 +1,1 @@
-https://test-bin-rs.github.io
+https://github.com/test-bin-rs/test-bin-rs.github.io/actions?query=branch%3Aassert-repo
