@@ -3,6 +3,7 @@ all: assert-repo assert-true test-bin
 assert-repo:
 	cargo install --git https://github.com/test-bin-rs/test-bin-rs.github.io --branch assert-repo --root .cargo
 	file .cargo/bin/assert-repo
+	.cargo/bin/assert-repo
 
 assert-true:
 	cargo install --git https://github.com/test-bin-rs/test-bin-rs.github.io --branch assert-true --root .cargo
