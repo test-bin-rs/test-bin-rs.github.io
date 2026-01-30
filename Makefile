@@ -1,4 +1,5 @@
 all:
 	cargo update
-	cargo run
 	cargo test
+	cargo run --bin test-bin
+	cargo run --bin test-assert-repo

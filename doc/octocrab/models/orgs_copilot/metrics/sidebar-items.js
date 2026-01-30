@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CopilotIdeCodeCompletions","CopilotMetrics","Editor","EditorLanguage","Language","Model"]};

@@ -1,1 +1,0 @@
-rd_("CiCheck the output of <code>make</code> in the workflow \xe2\x80\xa6")

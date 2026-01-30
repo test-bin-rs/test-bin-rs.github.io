@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CopilotBilling","CopilotBillingSeats","CopilotSeat","CopilotSeatBreakdown","SeatsCancelled","SeatsCreated"]};

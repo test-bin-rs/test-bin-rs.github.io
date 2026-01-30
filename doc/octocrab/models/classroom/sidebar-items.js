@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AssignmentType"],"struct":["AcceptedAssignment","Assignment","AssignmentGrade","Classroom","SimpleAssignment","SimpleClassroom","SimpleClassroomUser","SimpleCodeRepository","SimpleOrganization"]};

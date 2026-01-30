@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CacheKey"],"mod":["mem"],"struct":["CachedResponse","HttpCache","HttpCacheFuture","HttpCacheLayer"],"trait":["CacheStorage","CacheWriter"]};
