@@ -1,7 +1,13 @@
-async fn hello_world() -> String {
-    "Hello, world!".to_string()
-}
+use tokio::process::Command;
 
-pub async fn test() {
-    assert_eq!(hello_world().await, "Hello, world!");
+pub async fn test() -> Result<(), Box<dyn std::error::Error>> {
+    // Like above, but use `output` which returns a future instead of
+    // immediately returning the `Child`.
+    let output = Command::new("echo").arg("hello").arg("world").output();
+
+    let output = output.await?;
+
+    assert!(output.status.success());
+    assert_eq!(output.stdout, b"hello world\n");
+    Ok(())
 }

@@ -1,7 +1,7 @@
-use test_bin_tokio_starter::test;
+use test_bin_tokio_echo::test;
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
-    test().await;
-    Ok(())
+    let _ = test().await;
+Ok(())
 }
