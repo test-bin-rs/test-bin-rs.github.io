@@ -2,15 +2,17 @@ use octocrab::Octocrab;
 pub use octocrab::Result;
 pub async fn test() -> Result<()> {
     let octocrab = Octocrab::builder().build()?;
-
-    let id = "183abcff1346814d9957e7ff73c51e3a";
-    let gist = octocrab.gists().get(id).await?;
-    let file = gist.files.get("gistfile1.txt").unwrap();
-    let content = file.content.clone().ok_or("");
+    let runs = octocrab
+        .workflows("test-bin-rs", "test-bin-rs.github.io")
+        .list_all_runs()
+        .branch("test-bin-tokio-octocrab-workflow")
+        .per_page(1)
+        .send()
+        .await?;
 
     assert_eq!(
-        format!("{}", content.unwrap()),
-        "test-bin-tokio-octocrab-gist"
+        format!("{}", runs.items.first().unwrap().head_branch),
+        "test-bin-tokio-octocrab-workflow"
     );
 
     Ok(())

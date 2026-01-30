@@ -1,5 +1,5 @@
 [package]
-name = "test-bin-tokio-octocrab-gist"
+name = "test-bin-tokio-octocrab-workflow"
 version = "0.1.0"
 edition = "2024"
 
