@@ -1,2 +1,3 @@
-pub use octocrab::Octocrab;
-pub use octocrab::Result;
+pub async fn hello_world() -> String {
+    "Hello, world!".to_string()
+}

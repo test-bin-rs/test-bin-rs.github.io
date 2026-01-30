@@ -1,16 +1,7 @@
-use assert_repo::Octocrab;
-use assert_repo::Result;
+use test_bin_tokio_starter::*;
 
 #[tokio::main]
-async fn main() -> Result<()> {
-    let octocrab = Octocrab::builder().build()?;
-
-    let repo = octocrab
-        .repos("test-bin-rs", "test-bin-rs.github.io")
-        .get()
-        .await?;
-
-    assert_eq!(format!("{}", repo.id), "1145166759");
-
+async fn main() -> std::io::Result<()> {
+    assert_eq!(hello_world().await, "Hello, world!");
     Ok(())
 }
