@@ -1,7 +1,8 @@
 use assert_repo::Octocrab;
+use assert_repo::Result;
 
 #[tokio::main]
-async fn main() -> octocrab::Result<()> {
+async fn main() -> Result<()> {
     let octocrab = Octocrab::builder().build()?;
 
     let repo = octocrab
