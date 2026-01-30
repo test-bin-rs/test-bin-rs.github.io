@@ -1,4 +1,4 @@
-use octocrab::Octocrab;
+use assert_repo::Octocrab;
 
 #[tokio::main]
 async fn main() -> octocrab::Result<()> {
