@@ -1,7 +1,7 @@
-use test_bin_tokio_starter::test;
+use test_bin_tokio_octocrab_gist::Result;
+use test_bin_tokio_octocrab_gist::test;
 
 #[tokio::main]
-async fn main() -> std::io::Result<()> {
-    test().await;
-    Ok(())
+async fn main() -> Result<()> {
+    test().await
 }
