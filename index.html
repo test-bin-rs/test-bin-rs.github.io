@@ -32,7 +32,7 @@
           which is the format of <a href="https://en.wikipedia.org/wiki/Executable">executable programs</a>.
           For historical reason in computing, we usually put them in the <b>bin</b> directory.
           We also put huamn readable script files in <b>bin</b>, because they can be 
-          interpreted by runtime interpreter such as Bash, Python, Node.js, etc.
+          interpreted by a runtime interpreter such as Bash, Python, Node.js, etc.
         </li>
         <li>
           In rust crate system (see below), we <a href="https://doc.rust-lang.org/cargo/guide/creating-a-new-project.html">create bin and lib crates differently</a>.
@@ -62,9 +62,9 @@ $ cargo new add --lib
       Strickly speaking, a test excutable is no different from a normal executable compiled from <code>main.rs</code>.
     </p>
     <p>
-      The idea of <b>test-bin-rs</b> project is that we write simple and straight forward tests as plain
-      <pre>main.rs</pre> to study the runtime behavoir of code paths of Rust crates. The code is hosted on a github repo
-      at specific branches and can be installed anywhere (local or CI) and executed as normal bin crate.
+      The central idea of <b>test-bin-rs</b> project is that we can write focused tests in plain bin crate, i.e., 
+      <code>main.rs</code> to follow specific runtime code paths and understand the behavior of complicated systems. The code is hosted on a github repo
+      at specific branches instead of being published to crate.io. They can be installed anywhere (local or CI) and executed as normal bin crate.
     </p>
     <h2>An example of a complicated test-bin</h2>
 <p>This is a test on a complicated library <a href="https://docs.rs/crate/octocrab">octocrab</a> so the <code>cargo install</code> pulls in 221 packages.</p>
