@@ -67,7 +67,7 @@ $ cargo new add --lib
       at specific branches instead of being published to crate.io. They can be installed anywhere (local or CI) and executed as normal bin crate.
     </p>
     <h2>An example of a complicated test-bin</h2>
-<p>This is a test on a complicated library <a href="https://docs.rs/crate/octocrab">octocrab</a> so the <code>cargo install</code> pulls in 221 packages.</p>
+<p>This is a test on a specific code path of the library <a href="https://docs.rs/crate/octocrab">octocrab</a> which has a large amount of dependencies. Command <code>cargo install</code> pulls in 221 packages.</p>
 <code>main.rs</code>
 <pre>
 use octocrab::Octocrab;
