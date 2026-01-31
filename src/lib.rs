@@ -1,13 +1,12 @@
 use tokio::process::Command;
 
-pub async fn test() -> Result<(), Box<dyn std::error::Error>> {
-    // Like above, but use `output` which returns a future instead of
-    // immediately returning the `Child`.
+async fn hello_world() -> String {
     let output = Command::new("echo").arg("hello").arg("world").output();
+    let output = output.await.expect("No such file or directory");
+    String::from_utf8(output.stdout).expect("Format error")
+}
 
-    let output = output.await?;
-
-    assert!(output.status.success());
-    assert_eq!(output.stdout, b"hello world\n");
+pub async fn test() -> Result<(), Box<dyn std::error::Error>> {
+    assert_eq!(hello_world().await, "hello world\n");
     Ok(())
 }
